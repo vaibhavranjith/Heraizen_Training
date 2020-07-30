@@ -1,0 +1,6 @@
+1. Develop contact book menu driven cli application
+2. Each contact has #id,name,email,mobile as attributes
+3. Perform all CRUD opertions - Create, Read ( search, show all ), Update, Delete
+4. Program should not terminate until user quits 
+
+Note: No database is required, perform all operations using in-memory  

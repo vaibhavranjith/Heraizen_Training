@@ -1,0 +1,16 @@
+Assignment#3
+
+1. Load questions from question.txt and prepare quiz. 
+2. Start the quiz, when quiz start the question sould display one by one and prompt user answer as input.
+
+Once user done with all the questions do the following:
+
+	1. No of questions Correct
+	2. No of question Wrong
+	3. Secured percentage
+	4. Result
+
+Note: No database is required use the in memory and implement 
+
+
+	
