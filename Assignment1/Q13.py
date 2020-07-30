@@ -1,0 +1,2 @@
+a,b,c=int(input('Enter the 1st number:\n')),int(input('Enter the 2nd number:\n')),int(input('Enter the 3rd number:\n'))
+print(f"The biggest of the three numbers entered is: {a if a>b and a>c else (b if b>c else c) }")

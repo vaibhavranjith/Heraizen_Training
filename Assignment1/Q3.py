@@ -1,0 +1,2 @@
+empno,name,mosal=int(input("Enter the empno:\n")),input("Enter the employee name:\n"),int(input("Enter the monthly salary:\n"))
+print(f"Hi {name}! Your employee ID is {empno},monthly salary is Rs {mosal} and yearly salary is Rs {12*mosal}")

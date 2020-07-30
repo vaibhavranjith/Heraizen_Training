@@ -1,0 +1,2 @@
+wt1,wt2,wt3=float(input("enter the weight of the first person:\n")),float(input("enter the weight of the second person:\n")),float(input("enter the weight of the third person:\n"))
+print(f"The sum of weight of the 3 persons is {round(wt1+wt2+wt3,1)} and the average is {round((wt1+wt2+wt3)/3,1)}")
