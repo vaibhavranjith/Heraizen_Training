@@ -1,0 +1,8 @@
+1. Get empno,name,salary,dname, location of the all the employess
+2. Get the total salary of the given dept
+3. Get employee who are working in the given dname
+4. Get max and min paid employee
+5. Get count,max,min,avg salary of all the department
+6. Get max salary paid department
+7. Get the employee who are not reporting to anyone
+8. Get job count of each department

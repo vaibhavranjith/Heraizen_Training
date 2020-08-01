@@ -1,0 +1,14 @@
+
+Load data from ipl2020.json and perform the following:
+
+
+	1. Get all the team labels
+	2. Get all players of the given team
+	3. Get role wise count of given team
+	4. Get Player details by role and team
+	5. Get all team details
+	6. Get amount spent by each team
+	7. Get amount spent on role by the team
+	8. Display all the player details sory by given field
+	9. Get Max Paid players of all roles
+
