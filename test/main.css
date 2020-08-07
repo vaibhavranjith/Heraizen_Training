@@ -1,0 +1,66 @@
+
+.whole{
+    display: block;
+    padding:0;
+    margin:0;
+    width:100%;
+    height:100%;
+}
+.container-fluid{
+    padding:0;
+    
+}
+.nav-buts{
+    margin-left: auto;
+}
+.navbar-light .navbar-brand{
+    color:wheat;
+}
+.navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav .active>.nav-link {
+    color:wheat;
+    
+}
+
+.navbar-expand-lg{
+    background-color: #5f25cf;
+}
+
+.banner{
+    margin-top: 15px;
+    height: auto;
+    width: auto;
+    background-color:#5f25cf;
+    color:wheat;
+    margin-bottom:10px;
+}
+
+
+.IPL_head{
+    display:block;
+    margin:auto;
+    text-align: center;  
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.iplimg{
+    padding:10px 0 10px 0;   
+}
+
+
+.scrbdhead{
+    background-color:#5f25cf;
+    color:wheat;
+}
+.footer{
+  margin:0;
+  padding:0;
+  background-color:#5f25cf;
+  position:absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+}
+
+
+

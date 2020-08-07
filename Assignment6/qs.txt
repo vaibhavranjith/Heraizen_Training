@@ -1,0 +1,245 @@
+#1 Print the team labels
+
+[
+ {
+     $group: {
+         _id: null,
+         teamlabels: {
+             $push: "$_id"
+         }
+      }
+  }, 
+  {
+    $project: {
+        _id: 0,
+        labels: "$teamlabels"
+    }
+  }
+]
+
+
+
+Python:
+
+result = client['ipldb']['team'].aggregate([
+    {
+        '$group': {
+            '_id': None, 
+            'teamlabels': {
+                '$push': '$_id'
+            }
+        }
+    }, {
+        '$project': {
+            '_id': 0, 
+            'labels': '$teamlabels'
+        }
+    }
+])
+
+
+#2
+
+[{
+    $match: {
+        "_id": "CSK"
+    }
+}, {
+    $unwind: {
+        path: "$players",
+
+    }
+}, {
+    $project: {
+        name: "$players.name",
+        role: "$players.role",
+        label: "$_id",
+        price: "$players.price",
+        _id: 0
+    }
+}]
+
+
+Python:
+
+result = client['ipldb']['team'].aggregate([
+    {
+        '$match': {
+            '_id': 'CSK'
+        }
+    }, {
+        '$unwind': {
+            'path': '$players'
+        }
+    }, {
+        '$project': {
+            'name': '$players.name', 
+            'role': '$players.role', 
+            'label': '$_id', 
+            'price': '$players.price', 
+            '_id': 0
+        }
+    }
+])
+
+
+#3
+
+[{
+    $match: {
+        "_id": "RCB"
+    }
+}, {
+    $unwind: {
+        path: "$players",
+
+    }
+}, {
+    $group: {
+        _id: "$players.role",
+        count: {
+            $sum: 1
+        }
+    }
+}, {
+    $project: {
+        "rolename": "$_id",
+        _id: 0,
+        "count": "$count"
+    }
+}]
+
+
+Python:
+
+result = client['ipldb']['team'].aggregate([
+    {
+        '$match': {
+            '_id': 'RCB'
+        }
+    }, {
+        '$unwind': {
+            'path': '$players'
+        }
+    }, {
+        '$group': {
+            '_id': '$players.role', 
+            'count': {
+                '$sum': 1
+            }
+        }
+    }, {
+        '$project': {
+            'rolename': '$_id', 
+            '_id': 0, 
+            'count': '$count'
+        }
+    }
+])
+
+
+#4
+
+[{
+    $match: {
+        "_id": "RCB",
+
+    }
+}, {
+    $unwind: {
+        path: "$players",
+
+    }
+}, {
+    $match: {
+        "players.role": "Batsman"
+    }
+}, {
+    $project: {
+        "name": "$players.name",
+        "role": "$players.role",
+        "label": "$_id",
+        "price": "$players.price",
+        _id: 0
+    }
+}]
+
+
+Python:
+
+result = client['ipldb']['team'].aggregate([
+    {
+        '$match': {
+            '_id': 'RCB'
+        }
+    }, {
+        '$unwind': {
+            'path': '$players'
+        }
+    }, {
+        '$match': {
+            'players.role': 'Batsman'
+        }
+    }, {
+        '$project': {
+            'name': '$players.name', 
+            'role': '$players.role', 
+            'label': '$_id', 
+            'price': '$players.price', 
+            '_id': 0
+        }
+    }
+])
+
+
+
+
+
+[
+
+
+{
+$unwind: {
+  path: "$players",
+}
+}, {$group: {
+  _id: "$players.role",
+  maxprice: {
+    $max: "$players.price"
+  },
+  minprice: {
+    $min: "$players.price"
+  },
+  players:{$push:"$players"}
+}}, {$project: {
+   maxamount:"$maxprice",
+   minamount:"$minprice",
+
+      "maxplayers":{
+    $filter: {
+               input: "$players",
+               as: "players",
+               cond: { $eq: [ "$$players.price", "$maxprice" ] }
+            } 
+  },
+   "minplayers":{
+    $filter: {
+               input: "$players",
+               as: "players",
+               cond: { $eq: [ "$$players.price", "$minprice" ] }
+            } 
+  }
+
+  }}, {$project: {
+  "role":"$_id",
+  _id:0,
+  "maxamount":"$maxamount",
+  "minamount":"$minamount",
+  "maxpaidplayer":"$maxplayers",
+  "minpaidplayer":"$minplayers"
+}}, {$sort: {
+  role: -1
+}}]
+
+
+https://niranjan-ipl.firebaseapp.com/player

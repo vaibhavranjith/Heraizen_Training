@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="font-awesome.min.css">
+    <title>Hello, world!</title>
+  </head>
+  <body onload="altertable()">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <a class="navbar-brand" href="#">IPL stats</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Register</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Stats</a>
+            </li>
+            <li class="nav-item" id="login_privilege_alter">
+                <!-- <a class="nav-link" href="#">Stats</a> -->
+                <a class="nav-link" href="alter.html">ALTER</a>
+            </li>
+            <li class="nav-item" id="log_out_alter">
+                <a class="nav-link logout-btn" href="#" onclick="logout()">LOG-OUT</a>
+            </li>
+          </ul>
+        </div>
+      </nav> 
+      
+      <div class="container">
+        
+        <div class="container-fluid form-head">
+        </div>
+        <div class="row">
+        <div class="col">
+            <div class="container-fluid table-wrap" id="alter_content">
+            </div>
+        </div>
+
+        <div class="col">
+        
+        <div class="form-group row">
+            <label for="colFormLabel" class="col-sm-2 col-form-label">Team</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" onfocus="this.value=''" id="team" placeholder="Name of the team">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="colFormLabel" class="col-sm-2 col-form-label">Played</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" onfocus="this.value=''" id="played" placeholder="Number of games played">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="colFormLabel" class="col-sm-2 col-form-label">Won</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" onfocus="this.value=''" id="won" placeholder="Number of games won">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="colFormLabel" class="col-sm-2 col-form-label">lost</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" onfocus="this.value=''" id="lost" placeholder="Number of games lost">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="colFormLabel" class="col-sm-2 col-form-label">Net RR</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" onfocus="this.value=''"  id="netrr" placeholder="Net run rate">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="colFormLabel" class="col-sm-2 col-form-label">Points</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control"onfocus="this.value=''" id="points" placeholder="Points">
+            </div>
+          </div>
+          <div class="container-fluid form-head ">
+            <!-- <button type="button" class="btn btn-primary" onclick="addteam()">ADD</button> -->
+            <button type="button" class="btn btn-primary" id="btnAdd">ADD</button>
+            <button type="button" class="btn btn-primary" id="btnUpdate">UPDATE</button>
+         </div>
+        </div>
+
+
+        </div>
+
+
+
+      </div>
+      
+
+
+
+      <div class="footer">
+        <div class="container-fluid footer-container">
+          &#169 IPL 2020    
+        </div>
+        </div>
+
+      <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

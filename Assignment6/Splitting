@@ -1,0 +1,20 @@
+1.Pipeline to seperate teams from collections
+[{$project: {
+  name: "$name"
+  label:"$label",
+  city:"$city",
+  coach:"$coach",
+  home:"$home"
+
+  }}, {$out: 'teams'}]
+
+2.pipeline to split team from collections
+[{$unwind: {
+  path: "$players",
+
+  }}, {$project: {
+  name:"$players.name",
+  price:"$players.price",
+  role:"$players.role",
+  label:"$label"
+}}, {$out: 'players'}]
