@@ -1,0 +1,16 @@
+body{
+    background-color: #1c032b;
+}
+
+ul.nav-lst{
+    margin-top:15px;
+}
+.jumbotron{
+    background-color:#7730a1;
+}
+table-wrap.await-table{
+    align-items: center;
+}
+.lgo-btn{
+    margin-left:10px;
+}

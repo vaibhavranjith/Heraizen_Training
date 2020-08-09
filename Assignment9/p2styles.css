@@ -1,0 +1,21 @@
+body{
+    background-color: #1c032b;
+}
+ul.nav-lst{
+    margin-top:15px;
+}
+
+.form-wrapper{
+    margin-top: 15px;
+}
+
+.player-tb-wrapper{
+    margin-top:25px;
+
+}
+.pie-chart{
+    fill:#1c032b;
+}
+.lgo-btn{
+    margin-left:10px;
+}

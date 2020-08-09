@@ -1,0 +1,15 @@
+body{
+    background-color: #1c032b;
+}
+ul.nav-lst{
+    margin-top:15px;
+}
+.graph-wrapper{
+    margin-top:15px;
+}
+/* .graphwrapper.role-graph{
+    margin-top:200px;
+} */
+.lgo-btn{
+    margin-left:10px;
+}

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="p2styles.css">
+    <title>Hello, world!</title>
+  </head>
+  <body onload="p2init()">
+    <div class="container navbar-wrapper">
+        <ul class="nav nav-tabs nav-lst">
+            <li class="nav-item">
+              <a class="nav-link" href="page1.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="page2.html">Player Stats</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="page3.html">Team Stats</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="page4.html">Bidding Statistics</a>
+          </li>
+          <li>
+            <button type="button" id="lgo" class="btn btn-info lgo-btn ">Log-out</button>
+        </li>
+          </ul> 
+    </div>
+
+    <div class="container form-wrapper">
+        <select class="form-control" id="team-select">
+            <option>MI</option>
+            <option>RCB</option>
+            <option>DC</option>
+            <option>CSK</option>
+            <option>RR</option>
+            <option>KKR</option>
+            <option>SRH</option>
+            <option>KXIP</option>
+        </select>
+    </div>
+
+    <div class="cotainer player-tb-wrapper">
+        <div class="row">
+            <div class="col-lg-1">
+            </div>
+            <div class="col-lg-4 col-sm-12" id="player-table">
+                <div class="spinner-border text-primary" id="spinner1" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                        <div id="donutchart"  class="pie-chart" style="width: 600px; height: 400px;"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col" id="role-table">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>

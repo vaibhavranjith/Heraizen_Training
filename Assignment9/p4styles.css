@@ -1,0 +1,28 @@
+body{
+    background-color: #1c032b;
+}
+ul.nav-lst{
+    margin-top:15px;
+}
+.content-wrapper{
+    margin-top:15px;
+}
+.search-bar{
+    margin-top: 33px;
+}
+.input-group-text{
+    cursor: pointer;
+}
+.head{
+    color:#7730a1;
+    margin-bottom: 20px;
+}
+.search-r{
+    margin-top:30px;
+    padding-right:100px;
+    margin-left:30px;
+}
+
+.lgo-btn{
+    margin-left:10px;
+}

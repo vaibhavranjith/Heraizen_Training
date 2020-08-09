@@ -1,0 +1,50 @@
+body{
+    background-color:#1c032b;
+}
+.lnk-lst{
+    display:flex;
+    list-style: none;
+    float:right;
+}
+.lnk-lst button.login-btn{
+    text-decoration: none;
+    color:#1c032b;
+    font-size:19px;
+}
+.lgo-btn{
+    margin-left:10px;
+}
+.jumbotron{
+    background-color:#7730a1;
+}
+.card-body{
+    background-color: #7730a1;
+}
+.container.signin-container{
+    margin-top:8%;
+}
+.card.signin-card{
+    background-color: #7730a1;
+    padding:40px 0px 20px;
+    box-shadow:2px 2px 5px rgba(0,0,0,.5);
+    -webkit-box-shadow:2px 2px 5px rgba(0,0,0,.5);
+    -moz-box-shadow:2px 2px 5px rgba(0,0,0,.5);
+}     
+form.signin-portal{
+    max-width: 350px;
+    margin:auto;
+}
+button.signin-btn{
+    color:#ffffff;
+    background-color:#2e0d3f;
+    width: 200px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom: 1.2rem;
+    
+}
+.form-head{
+    text-align: center;
+    margin-top:10px;
+
+}
